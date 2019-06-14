@@ -22,6 +22,12 @@ public interface MovieRepository extends CrudRepository<Movie, Long> {
 	 * 		a user query keyword
 	 * @return list of movie
 	 */
-	@Query("SELECT m FROM Movie m where m.name LIKE %:keyword%")
+	 /*
+	 Case insensitive SQL
+	 Source: https://alvinalexander.com/sql/sql-select-case-insensitive-query-queries-upper-lower
+	 MySQL Concat function
+	 Source: https://www.w3schools.com/sql/func_mysql_concat.asp
+	 */
+	@Query("SELECT m FROM Movie m where lower(m.name) LIKE CONCAT('%',lower(:keyword),'%')")
 	List<Movie> findByNameContains(@Param("keyword") String keyword);
 }

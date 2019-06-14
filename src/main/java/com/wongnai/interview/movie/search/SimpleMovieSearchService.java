@@ -14,6 +14,7 @@ import com.wongnai.interview.movie.MovieSearchService;
 import com.wongnai.interview.movie.external.MovieDataService;
 
 @Component("simpleMovieSearchService")
+
 public class SimpleMovieSearchService implements MovieSearchService {
 	@Autowired
 	private MovieDataService movieDataService;
@@ -37,8 +38,6 @@ public class SimpleMovieSearchService implements MovieSearchService {
 				}
 			}
 		}
-		//for (Movie i : result) System.out.println(i.getName());
-		//System.out.println(result.size());
 		return result;
 	}
 
