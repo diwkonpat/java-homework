@@ -8,6 +8,7 @@ com\wongnai\interview\movie\search\SimpleMovieSearchService.class
 com\wongnai\interview\movie\search\InvertedIndexMovieSearchService.class
 com\wongnai\interview\movie\MovieSearchService.class
 com\wongnai\interview\movie\search\DatabaseMovieSearchService.class
+com\wongnai\interview\movie\InvertedIndexMap.class
 com\wongnai\interview\movie\external\MovieData.class
 com\wongnai\interview\movie\external\MoviesResponse.class
 com\wongnai\interview\movie\external\MovieDataService.class
